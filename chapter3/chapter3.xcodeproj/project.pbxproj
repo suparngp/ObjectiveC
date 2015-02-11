@@ -9,6 +9,7 @@
 /* Begin PBXBuildFile section */
 		173A76451A8AE0CC003B4ACB /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 173A76441A8AE0CC003B4ACB /* main.m */; };
 		173A764D1A8AE0EB003B4ACB /* Guitar.m in Sources */ = {isa = PBXBuildFile; fileRef = 173A764C1A8AE0EB003B4ACB /* Guitar.m */; };
+		EBB5752F1A8B39A400727320 /* Item.m in Sources */ = {isa = PBXBuildFile; fileRef = EBB5752E1A8B39A400727320 /* Item.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
@@ -28,6 +29,8 @@
 		173A76441A8AE0CC003B4ACB /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		173A764B1A8AE0EB003B4ACB /* Guitar.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Guitar.h; sourceTree = "<group>"; };
 		173A764C1A8AE0EB003B4ACB /* Guitar.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Guitar.m; sourceTree = "<group>"; };
+		EBB5752D1A8B39A400727320 /* Item.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Item.h; sourceTree = "<group>"; };
+		EBB5752E1A8B39A400727320 /* Item.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Item.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -60,6 +63,8 @@
 		173A76431A8AE0CC003B4ACB /* chapter3 */ = {
 			isa = PBXGroup;
 			children = (
+				EBB5752D1A8B39A400727320 /* Item.h */,
+				EBB5752E1A8B39A400727320 /* Item.m */,
 				173A76441A8AE0CC003B4ACB /* main.m */,
 				173A764B1A8AE0EB003B4ACB /* Guitar.h */,
 				173A764C1A8AE0EB003B4ACB /* Guitar.m */,
@@ -123,6 +128,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				EBB5752F1A8B39A400727320 /* Item.m in Sources */,
 				173A76451A8AE0CC003B4ACB /* main.m in Sources */,
 				173A764D1A8AE0EB003B4ACB /* Guitar.m in Sources */,
 			);
@@ -238,6 +244,7 @@
 				173A764A1A8AE0CC003B4ACB /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
