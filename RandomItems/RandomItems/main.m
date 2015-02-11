@@ -56,16 +56,30 @@ int main(int argc, const char * argv[]) {
 
         NSMutableArray * newItems = [[NSMutableArray alloc] init];
         
-        for(int i = 0; i < 10; i++){
-            Item *item = [Item randomItem];
-            [newItems addObject:item];
-        }
+//        for(int i = 0; i < 10; i++){
+//            Item *item = [Item randomItem];
+//            [newItems addObject:item];
+//        }
         
-        Item *specialItem
+        Item *backpack = [[Item alloc] initWithItemName:@"Backpack"];
+        Item *calculator = [[Item alloc] initWithItemName:@"Calculator"];
+        [newItems addObject:backpack];
+        [newItems addObject:calculator];
+        
+        backpack.containedItem = calculator;
         
         NSLog(@"%@", newItems);
+        
+        backpack = nil;
+        //calculator = nil;
+        
+        for(Item *item in newItems){
+            NSLog(@"Item: %@", item);
+        }
         // Destroy the instance of the items array
         items = nil;
+        
+        NSLog(@"%@", calculator);
     }
     return 0;
 }

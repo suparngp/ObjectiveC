@@ -89,4 +89,25 @@
     NSString* description = [[NSString alloc] initWithFormat:@"%@, %@, %@, %d", self.itemName, self.serialNumber, self.dateCreated, self.valueDollars];
     return description;
 }
+
+- (void) setContainerItem:(Item *)item{
+    _containerItem = item;
+}
+
+- (Item *) containerItem{
+    return _containerItem;
+}
+
+- (void) setContainedItem:(Item *)item{
+    _containedItem = item;
+    item.containerItem = self;
+}
+
+- (Item *) containedItem{
+    return _containedItem;
+}
+
+- (void) dealloc{
+    NSLog(@"Destroyed %@", self);
+}
 @end
