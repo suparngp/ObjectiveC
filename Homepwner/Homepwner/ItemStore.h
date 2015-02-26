@@ -9,10 +9,13 @@
 #import <Foundation/Foundation.h>
 
 @class Item;
+
+
 @interface ItemStore : NSObject
 
 @property (nonatomic, readonly, strong) NSArray *allItems;
 
 + (instancetype) sharedStore;
 - (Item *) createItem;
+- (void) removeItem:(Item *)item;
 @end

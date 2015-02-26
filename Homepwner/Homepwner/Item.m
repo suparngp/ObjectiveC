@@ -7,7 +7,9 @@
 //
 
 #import "Item.h"
-
+@interface Item()
+@property (strong, readwrite, nonatomic) NSString* key;
+@end
 @implementation Item
 
 + (instancetype) randomItem{
@@ -46,6 +48,9 @@
         _valueDollars = valueInDollar;
         _serialNumber = serialNumber;
         _dateCreated = [[NSDate alloc] init];
+        NSUUID *uuid = [[NSUUID alloc] init];
+        NSString *uuidString = [uuid UUIDString];
+        _key = uuidString;
     }
     return self;
 }
@@ -58,29 +63,6 @@
     return [self initWithItemName:@"" valueInDollar:0 serialNumber:@""];
 }
 
-- (void) setItemName:(NSString *)str {
-    _itemName = str;
-}
-
-- (NSString *) itemName{
-    return _itemName;
-}
-
-- (void) setSerialNumber:(NSString *)str{
-    _serialNumber = str;
-}
-
-- (NSString *) serialNumber{
-    return _serialNumber;
-}
-
-- (NSDate *) dateCreated{
-    return _dateCreated;
-}
-
-- (void) setValueDollars:(int)value{
-    _valueDollars = value;
-}
 
 - (int) valueDollars{
     return _valueDollars;

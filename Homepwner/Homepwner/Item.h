@@ -10,13 +10,11 @@
 
 @interface Item : NSObject
 
-{
-    NSString *_itemName;
-    NSString *_serialNumber;
-    int _valueDollars;
-    NSDate *_dateCreated;
-}
-
+@property (strong, nonatomic) NSString* itemName;
+@property (strong, nonatomic) NSString *serialNumber;
+@property (nonatomic) int valueDollars;
+@property (strong, nonatomic) NSDate *dateCreated;
+@property (strong, readonly, nonatomic) NSString *key;
 + (instancetype) randomItem;
 // Designated init for the Item
 
@@ -24,16 +22,5 @@
                     valueInDollar: (int) valueInDollar
                      serialNumber: (NSString *) serialNumber;
 - (instancetype) initWithItemName:(NSString *)name;
-
-- (void) setItemName:(NSString *) str;
-- (NSString*)itemName;
-
-- (void) setSerialNumber:(NSString *)str;
-- (NSString *) serialNumber;
-
-- (void) setValueDollars:(int)value;
-- (int) valueDollars;
-- (NSDate *) dateCreated;
-
 
 @end

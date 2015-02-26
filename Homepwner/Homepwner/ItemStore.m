@@ -8,7 +8,7 @@
 
 #import "ItemStore.h"
 #import "Item.h"
-
+#import "ItemsImageStore.h"
 
 @interface ItemStore ()
 
@@ -22,6 +22,7 @@
     if(!shared){
         shared =  [[self alloc] initPrivate];
     }
+    NSLog(@"Just returning");
     return shared;
     
 }
@@ -46,5 +47,11 @@
     Item *randomItem = [Item randomItem];
     [self.privateItems addObject:randomItem];
     return  randomItem;
+}
+
+- (void) removeItem:(Item *)item{
+    NSString *key = item.key;
+    [[ItemsImageStore sharedStore] deleteImageForKey:key];
+    [self.privateItems removeObjectIdenticalTo:item];
 }
 @end
